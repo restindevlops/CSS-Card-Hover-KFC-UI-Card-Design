@@ -49,5 +49,20 @@ body{
 
 .card .circle:hover:before{
     clip-path: circle(400px at center);
-    background: #F9C02E;
+    background: #F9B02E;
+}
+
+.card img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); /* Inorder to have the transition effect, there should be a transform property. */
+    height: 280px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.card:hover img{
+    left: 72%;      /* Transition happens when shifted to 72% left. */
+    height: 350px;
 }
